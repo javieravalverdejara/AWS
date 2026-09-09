@@ -1,5 +1,4 @@
-
-# Bug #2: falta message.upper() — las minúsculas no se cifran
+# Bug #4: print muestra myEncryptedMessage en vez de myDecryptedMessage
 def getDoubleAlphabet(alphabet):
     doubleAlphabet = alphabet + alphabet
     return doubleAlphabet
@@ -14,7 +13,7 @@ def getCipherKey():
 
 def encryptMessage(message, cipherKey, alphabet):
     encryptedMessage = ""
-    uppercaseMessage = message.upper()  # CORRECCIÓN: agregar .upper()
+    uppercaseMessage = message.upper()
     for currentCharacter in uppercaseMessage:
         position = alphabet.find(currentCharacter)
         newPosition = position + int(cipherKey)
@@ -40,6 +39,6 @@ def runCaesarCipherProgram():
     myEncryptedMessage = encryptMessage(myMessage, myCipherKey, myAlphabet2)
     print(f'Encrypted Message: {myEncryptedMessage}')
     myDecryptedMessage = decryptMessage(myEncryptedMessage, myCipherKey, myAlphabet2)
-    print(f'Decrypted Message: {myDecryptedMessage}')
+    print(f'Decrypted Message: {myDecryptedMessage}')  # CORRECCIÓN: myDecryptedMessage
 
 runCaesarCipherProgram()

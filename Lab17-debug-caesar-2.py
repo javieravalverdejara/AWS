@@ -1,4 +1,3 @@
-
 # Bug #2: falta message.upper() — las minúsculas no se cifran
 def getDoubleAlphabet(alphabet):
     doubleAlphabet = alphabet + alphabet
@@ -14,7 +13,7 @@ def getCipherKey():
 
 def encryptMessage(message, cipherKey, alphabet):
     encryptedMessage = ""
-    uppercaseMessage = message.upper()  # CORRECCIÓN: agregar .upper()
+    uppercaseMessage = message.upper()
     for currentCharacter in uppercaseMessage:
         position = alphabet.find(currentCharacter)
         newPosition = position + int(cipherKey)
